@@ -1,0 +1,18 @@
+<odoo>
+    <!-- Employees see only their own leave requests -->
+    <record id="leave_request_employee_rule" model="ir.rule">
+        <field name="name">Leave Request: Employee Own Records</field>
+        <field name="model_id" ref="model_leave_request"/>
+        <field name="domain_force">
+            [('emp_name_two.user_id', '=', user.id)]
+        </field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    <!-- Administrators have full access -->
+    <record id="leave_request_admin_all_rule" model="ir.rule">
+        <field name="name">Leave Request: Administrator Full Access</field>
+        <field name="model_id" ref="model_leave_request"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('base.group_system'))]"/>
+    </record>
+</odoo>
