@@ -1,7 +1,7 @@
 # employee_leave_management
 Developed a custom Odoo module to manage employee leave requests with a structured approval workflow.Added role-based access control for employees and managers.
-Technology: Python, Odoo ORM, XML, PostgreSQL
-Key Contributions:
+<br>Technology: Python, Odoo ORM, XML, PostgreSQL
+<br>Key Contributions:
 <ul>
 <li>Designed models for leave requests and leave types.</li>
 
